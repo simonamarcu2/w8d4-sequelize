@@ -11,7 +11,7 @@ let sequelize = new Sequelize(process.env.MYSQL_URI);
 
 //OR to authenticate the connection
 
-// let connection = async() => {
+// let connection = async () => {
 //   try {
 //     await sequelize.authenticate()
 //   } catch (error) {
