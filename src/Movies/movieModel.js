@@ -1,4 +1,4 @@
-const sequelize = require("..db/connection.js");
+const sequelize = require("../db/connections");
 const { DataTypes } = require('sequelize');
 
 const Flim = sequelize.define('PrimeVideo', {
@@ -10,18 +10,14 @@ const Flim = sequelize.define('PrimeVideo', {
     type: DataTypes.STRING,
     allowNull: false
   },
-  director: {
-    type: DataTypes.STRING,
-    allowNull: false
-  },
-  genre: {
-    type: DataTypes.STRING,
-    allowNull: false
-  },
-  year: {
-    type: DataTypes.INTEGER,
-    allowNull: false
-  }
+  // director: {
+  //   type: DataTypes.STRING,
+  //   allowNull: false
+  // },
+  // genre: {
+  //   type: DataTypes.STRING,
+  //   allowNull: false
+  // }
 })
 
-module.exports = Film;
+module.exports = Flim
