@@ -10,6 +10,13 @@ const Flim = sequelize.define('PrimeVideo', {
     type: DataTypes.STRING,
     allowNull: false
   },
+  genre: {
+    type: DataTypes.STRING,
+    allowNull: true,
+  },
+  rating: {
+    type: DataTypes.INTEGER,
+  },
   // director: {
   //   type: DataTypes.STRING,
   //   allowNull: false
