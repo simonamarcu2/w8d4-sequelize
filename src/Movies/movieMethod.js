@@ -20,3 +20,24 @@ exports.list = async () => {
     console.log(error)
   }
 }
+
+exports.find = async (obj) => {
+  try {
+    const searchResults = await Film.findAll({
+      where: obj,
+    });
+    searchResults.forEach((movie) => {
+      printAttribs(movie);
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+exports.update = async (searchObj, updateObj) => {
+  await Film.update(updateObj, { where: searchObj });
+};
+
+exports.destroy = async (deleteObj) => {
+  await Film.destroy({ where: deleteObj });
+};
